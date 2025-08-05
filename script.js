@@ -1,4 +1,4 @@
-const backendURL = "http://127.0.0.1:5000/summarize";
+const backendURL = "https://pdf-summarizer-backend-4lqb.onrender.com/summarize";
 
 function showFileName(input) {
     const fileNameSpan = document.getElementById('fileName');
