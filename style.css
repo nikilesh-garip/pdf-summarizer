@@ -1,0 +1,125 @@
+/* Global */
+* { box-sizing: border-box; }
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #060606;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    margin: 0;
+}
+
+/* Glassmorphism Container */
+.container.glass {
+    padding: 30px;
+    border-radius: 20px;
+    width: 85%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* Upload area */
+.upload-box {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.15);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.upload-box:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+#fileName {
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    opacity: 0.9;
+    text-align: center;
+}
+
+/* Button */
+#summarizeBtn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background-color: #00c6ff;
+    background-image: linear-gradient(90deg,#00c6ff,#0072ff);
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: 0.3s transform;
+}
+#summarizeBtn:hover {
+    transform: translateY(-3px);
+}
+
+/* Loader */
+.loader {
+    border: 5px solid rgba(255,255,255,0.3);
+    border-top: 5px solid #00c6ff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 0.8s linear infinite;
+    display: block;
+    margin: 10px auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Summary Box */
+.summary {
+    min-height: 100px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.summary.fade {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* Copy button styling */
+.copy-button {
+    margin-top: 12px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background-color: #ff6a00;
+    background-image: linear-gradient(45deg,#ff6a00,#ee0979);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s transform;
+}
+.copy-button:hover {
+    transform: translateY(-2px);
+}
+

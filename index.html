@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>PDF Summarizer</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="container glass">
+    <h1>PDF Summarizer</h1>
+
+    <label class="upload-box">
+        <input type="file" id="pdfFile" accept=".pdf" hidden onchange="showFileName(this)">
+        <span id="uploadText">Choose PDF</span>
+    </label>
+    <div id="fileName"></div>
+
+    <button id="summarizeBtn" onclick="uploadPDF()">Summarize</button>
+
+    <h2>Summary:</h2>
+    <div id="result" class="summary"></div>
+    <button id="copyBtn" class="copy-button" onclick="copySummary()" hidden>Copy Summary</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
