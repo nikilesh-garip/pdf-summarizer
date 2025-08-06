@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Load tokenizer + model
-model_name = "sshleifer/distilbart-cnn-12-6"
+model_name = "Falconsai/text_summarization"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
 
